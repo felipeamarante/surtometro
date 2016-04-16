@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 #CONFIGURATION#
 #DEFAULT PORT IS 5000
-appURL = "http://surtometro.cloudlet.com.br:5000"
+appURL = "http://surtometro.cloudlet.com.br"
 
 
 
