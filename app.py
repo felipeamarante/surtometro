@@ -16,7 +16,7 @@ recordDay = datetime.datetime.now()
 counterDays = today - firstDay
 jinjaDay = datetime.datetime.now()
 jinjaRecord = datetime.datetime.now()
-
+totalSurto = 0
 
 #DEBUG
 print today
@@ -49,13 +49,14 @@ def core():
 #        jinjaRecord = recordDay.seconds
 
 
-    return render_template('index.html', jinjaDay=jinjaDay, jinjaRecord=jinjaRecord, appURL=appURL)
+    return render_template('index.html', jinjaDay=jinjaDay, jinjaRecord=jinjaRecord, appURL=appURL, totalSurto=totalSurto)
 
 
 
 @app.route("/reset")
 def resetCounter():
-    global firstDay
+    global firstDay, totalSurto
+    totalSurto += 1
     firstDay = datetime.datetime.now()
     return redirect("")
 
@@ -64,6 +65,6 @@ def resetCounter():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=False)
 
 
