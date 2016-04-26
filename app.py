@@ -40,7 +40,7 @@ def core():
     if firstDay < today:
         counterDays = today - firstDay
         print counterDays
-        jinjaDay = counterDays.seconds
+        jinjaDay = counterDays.minutes
 
 #TODO
 #    if recordDay - today <= counterDays:
