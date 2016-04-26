@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 #CONFIGURATION#
 #DEFAULT PORT IS 5000
-appURL = "http://surtometro.cloudlet.com.br"
+appURL = "http://127.0.0.1:5000"
 
 
 
@@ -40,7 +40,7 @@ def core():
     if firstDay < today:
         counterDays = today - firstDay
         print counterDays
-        jinjaDay = counterDays.days
+        jinjaDay = counterDays.seconds
 
 #TODO
 #    if recordDay - today <= counterDays:
