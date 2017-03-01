@@ -32,7 +32,7 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<h1>Jono is without saying FUCK for {{jinjaDay}} seconds. </h1>
-                    <h2 class="subtitle">He already said FUCK {{totalSurto}} times. </h2>
+                    <h2 id="seconds-counter" class="subtitle">He already said FUCK {{totalSurto}} times. </h2>
                     <!-- TODO                <h2 class="subtitle">Ja fiquei {{jinjaRecord}} dias sem surtar!</h2> TODO -->
 					<div id="countdown"></div>
 					<form class="form-inline signup" role="form">
@@ -54,6 +54,22 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="{{ url_for('static',filename='assets/js/bootstrap.min.js')  }}"></script>
     <script src="{{ url_for('static',filename='assets/js/jquery.countdown.min.js')  }}"></script>
+
+<script>
+
+var seconds = {{jinjaDay}};
+var el = document.getElementById('seconds-counter');
+
+function incrementSeconds() {
+    seconds += 1;
+    el.innerText =  seconds ;
+}
+
+var cancel = setInterval(incrementSeconds, 1000);
+
+</script>
+
+
 	
   </body>
 </html>
