@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 #CONFIGURATION#
 #DEFAULT PORT IS 5000
-appURL = "http://127.0.0.1:5000"
+appURL = "http://fuckometer-dev.eu-west-1.elasticbeanstalk.com"
 
 
 
