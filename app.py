@@ -63,7 +63,7 @@ def resetCounter():
 
 @app.route("/alexa")
 def alexa():
-    return totalSurto
+    return (totalSurto)
 
 
 
